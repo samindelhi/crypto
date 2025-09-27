@@ -1,0 +1,39 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments folders (windows)
+.env/
+.venv/
+env/
+venv/
+Lib/
+Scripts/
+Include/
+pyvenv,cfg
+
+
+# IDE and OS clutter
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Streamlit cache
+.streamlit/
+
+# Zip files
+*.zip
+
+# Model outputs (optional)
+models/*.sav
+models/*.h5
