@@ -1,0 +1,51 @@
+{
+  "project": "Crypto Regime-Aware Forecasting",
+  "version": "v1.0",
+  "created": "2025-09-26",
+  "author": "Shyam Subramani",
+  "models": {
+    "calm_model": {
+      "filename": "model_calm.pkl",
+      "samples": 892,
+      "regime": "calm",
+      "target": "liquidity_ratio",
+      "feature_count": 32,
+      "top_features": ["roll_std_7", "momentum_1d", "pct_change_24h", "shock_z", "std7_shockflag"],
+      "prediction_range": [0.175, 0.340],
+      "notes": "Stable predictions with low volatility sensitivity"
+    },
+    "shock_model": {
+      "filename": "model_shock.pkl",
+      "samples": 385,
+      "regime": "shock",
+      "target": "liquidity_ratio",
+      "feature_count": 32,
+      "top_features": ["pct_change_7d", "volume_24h", "roll_std_7", "momentum_1d", "vol_ratio_7_30"],
+      "prediction_range": [0.047, 0.121],
+      "notes": "Responsive to volatility and directional momentum"
+    }
+  },
+  "features": {
+    "source": "build_features.py",
+    "regime_aware": true,
+    "regime_flags": ["shock_z", "vol_ratio_7_30", "regime_shock"],
+    "calendar_features": ["dayofweek", "month"],
+    "engineered": ["lag_1", "roll_std_7", "momentum_1d", "shock_lag1", "std7_shockflag"]
+  },
+  "training": {
+    "data_source": "crypto_training_data.pkl",
+    "augmentation": "Synthetic volatility injection for shock regime",
+    "regime_split": {
+      "calm": 892,
+      "shock": 385
+    },
+    "notes": "Shock regime enriched via duplication and perturbation"
+  },
+  "inference": {
+    "script": "predict_live.py",
+    "routing": "regime_shock flag",
+    "live_data": "live_crypto_data_clean.pkl",
+    "output": "df_pred",
+    "prediction_behavior": "Regime-sensitive, non-flat predictions"
+  }
+}
