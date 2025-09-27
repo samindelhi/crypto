@@ -160,8 +160,22 @@ ___
 
 📤 Handoff Notes & Artefacts
 
+>### Documentation Index
+- See [Readme.md](readme.md) — Project homepage and setup guide.
+- See [Problem Statement](docs/crypto_assignment.md) — Assignment brief and scope.
+- See [Handoff-Note.md](docs/Handoff-Note.md) — Final handoff checklist and packaging instructions.
+- See [folder_structure.txt](folder_structure.txt) — Full directory layout and artifact map.
+- See [Crypto_HLD_Document.md](docs/Crypto_HLD_Document.md) — High-level design overview of the crypto pipeline.
+- See [HLD-LLD.md](docs/HLD-LLD.md) — Combined high-level and low-level design notes.
+- See [ML Pipeline Architecture](docs/Pipeline_Arch_Doc.md) — Architecture documentation for the ML pipeline.
+- See [EDA Report](docs/eda_report.md) — Exploratory data analysis findings.
+- See [Mode Evaluation Report](docs/model_evaluation_report.md) — Evaluation metrics and model performance summary.
+- See [Final Report](docs/Final_report.md) — Final project report and summary.
+
+
+
 >### Final packaging includes:
-> - See [Handoff-Note.md](handoff-note.md) for deployment instructions and final packaging notes.
+> - See [Handoff-Note.md](docs/Handoff-Note.md) for deployment instructions and final packaging notes.
 > - Zipped folder with models, scripts, sample files
 > - README with usage instructions
 > - Preprocessed `.pkl` and raw `.csv` for live testing

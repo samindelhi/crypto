@@ -64,7 +64,7 @@
         Avg MAE:  0.0740
         Avg R²:   0.7989
 ```
-## 4. Deferred Enhancements
+## 4. Optional Enhancements
 - Regime overlays on time series
 - Volatility zone annotations
 - SHAP deltas across regimes
